@@ -34,6 +34,5 @@
   </script>
   
   <style scoped>
-  /* Adicione estilos customizados se necessário */
   </style>
   

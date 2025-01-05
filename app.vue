@@ -2,11 +2,9 @@
   <Header />
 
   <div
-    class="min-h-screen flex flex-col items-center bg-gradient-to-b from-black via-blue-950 to-blue-500"
+    class="min-h-screen flex flex-col items-center bg-gradient-to-b from-black via-blue-950 to-blue-800"
   >
-    <!-- Container Central -->
     <div class="w-full max-w-screen-xl mx-auto p-6">
-      <!-- Logo -->
       <div class="w-full flex justify-center mb-20">
         <img
           src="./assets//images/logo.png"
@@ -15,7 +13,6 @@
         />
       </div>
 
-      <!-- Texto Principal -->
       <p
         class="text-white text-xl md:text-2xl font-sans leading-relaxed mb-12 text-center"
       >
@@ -30,9 +27,7 @@
         </strong>
       </p>
 
-      <!-- Imagens dos Carros -->
       <div class="flex flex-wrap justify-center gap-4 mb-16">
-        <!-- Carros exibidos progressivamente -->
         <img
           src="./assets/images/car1.png"
           alt="Carro 1"
@@ -50,11 +45,10 @@
         />
       </div>
 
-      <!-- Título -->
       <h2
-        class="text-white text-xl md:text-2xl font-sans leading-relaxed mb-12 text-center"
+        class="text-white text-xl md:text-4xl font-sans leading-relaxed mb-12 text-center"
       >
-        <strong> Contrate a KRA Rastreamento e mantenha-se seguro com: </strong>
+        <strong> Contrate a KRA Rastreamento e mantenha-se seguro com tecnologia de ponta </strong>
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -67,6 +61,7 @@
       </div>
 
       <h1
+        id="rastreador"
         class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
         <strong>Rastreador</strong>
@@ -151,6 +146,7 @@
       </div>
 
       <h1
+        id="servicos"
         class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
         <strong>Serviços</strong>
@@ -175,15 +171,10 @@
       </div>
 
       <h1
+        id="contatos"
         class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
         <strong>Contatos</strong>
-      </h1>
-      <h1
-        class="text-white text-6xl md:text-8xl lg:text-2xl font-sans leading-tight mb-12 mt-16 text-center"
-      >
-        <P><strong>Telefone:</strong></P>
-        <strong> (31)99823-2657 </strong>
       </h1>
 
       <div class="flex flex-col items-center gap-2">
@@ -196,7 +187,7 @@
           class="rounded-lg border border-transparent py-2 px-4 text-white font-medium bg-green-500 hover:bg-green-600 transition"
           onclick="window.open('https://wa.me/553198232657', '_blank')"
         >
-          Fale com a gente no WhatsApp
+          Fale conosco via WhatsApp
         </button>
       </div>
 
@@ -212,6 +203,20 @@
         >
           Siga-nos no Instagram
         </button>
+      </div>
+    </div>
+    <div class="w-full bg-black py-6 px-4">
+      <div class="max-w-screen-xl mx-auto flex flex-col items-center text-white text-center gap-4">
+        <img class="h-20 w-auto" src="./assets/images/logo.png" alt="Logo" />
+        <p class="text-sm md:text-base font-light">
+          <strong>Telefone:</strong> (31)99823-2657
+        </p>
+        <p class="text-sm md:text-base font-light">
+          <strong>CNPJ KRA Soluções:</strong> 00.000.000/0000-00
+        </p>
+        <p class="text-sm md:text-base font-light">
+          <strong>Endereço:</strong> Av Getúlio Vargas, 671, Savassi, BH/MG, Belo Horizonte, Brazil 30112021
+        </p>
       </div>
     </div>
   </div>
@@ -237,7 +242,7 @@ const cards = [
   { name: "Cerca virtual", icon: faVectorSquare },
   { name: "Aviso de ignição", icon: faCarOn },
   { name: "Relatório de trajetos", icon: faRoute },
-  { name: "Rastreamento 24H", icon: faMagnifyingGlassLocation },
+  { name: "Aplicativo Movel", icon: faMobileScreenButton },
   { name: "Bloqueio imediato", icon: faLocationPinLock },
 ];
 
