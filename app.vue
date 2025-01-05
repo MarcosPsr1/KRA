@@ -1,4 +1,6 @@
 <template>
+  <Header />
+
   <div
     class="min-h-screen flex flex-col items-center bg-gradient-to-b from-black via-blue-950 to-blue-500"
   >
@@ -32,21 +34,20 @@
       <div class="flex flex-wrap justify-center gap-4 mb-16">
         <!-- Carros exibidos progressivamente -->
         <img
-          src="./assets/images/car5.png"
+          src="./assets/images/car1.png"
           alt="Carro 1"
           class="max-h-[400px] w-auto block"
         />
         <img
-        src="./assets/images/car4.png"
-        alt="Carro 3"
-          class="max-h-[400px] w-auto hidden md:block"
+          src="./assets/images/car3.png"
+          alt="Carro 3"
+          class="max-h-[400px] w-auto"
         />
         <img
-        src="./assets/images/car2.png"
-        alt="Carro 3"
-          class="max-h-[420px] w-auto hidden md:block"
+          src="./assets/images/car2.png"
+          alt="Carro 3"
+          class="max-h-[420px] w-auto"
         />
-    
       </div>
 
       <!-- Título -->
@@ -56,86 +57,168 @@
         <strong> Contrate a KRA Rastreamento e mantenha-se seguro com: </strong>
       </h2>
 
-      <!-- Cards -->
-      <!-- <div class="flex flex-wrap justify-center gap-8 mb-12">
-        <StatsCard
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <FeatureCard
           v-for="(card, index) in cards"
           :key="index"
           :name="card.name"
-          :stat="card.stat"
           :icon="card.icon"
         />
-      </div> -->
+      </div>
 
-      <!-- Texto Final -->
-      <p
-        class="text-white text-xl md:text-2xl font-sans leading-relaxed mb-12 mt-8 text-center"
+      <h1
+        class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
-        <strong>
-          Com a tecnologia avançada dos nossos rastreadores, inúmeros veículos
-          já foram recuperados em perfeito estado, minutos após o roubo. Na KRA
-          Soluções em Rastreamento, a sua segurança é prioridade. Garanta agora
-          mesmo proteção para o que é mais importante. Entre em contato conosco
-          e descubra como podemos ajudar você a ter mais controle e
-          tranquilidade!
-        </strong>
-      </p>
+        <strong>Rastreador</strong>
+      </h1>
 
-      <!-- Banner com Background -->
       <div
-  class="relative bg-cover bg-center flex items-center justify-center overflow-hidden"
-  :style="{ backgroundImage: `url(${gifBackground})`, height: '50vh' }"
->
-  <!-- Conteúdo centralizado -->
-  <div
-    class="absolute inset-0 flex flex-col items-center justify-center gap-6 p-4"
-  >
-    <!-- Logo da Empresa -->
-  <img
-    src="./assets/images/logo.png"
-    alt="Logo da Empresa"
-    style="height: 180px; width: auto;"
-  />
-
-
-    <!-- Botão do WhatsApp -->
-    <div class="flex flex-col items-center gap-2">
-      <img
-        src="./assets/images/whatsapp.svg"
-        alt="WhatsApp Icon"
-        class="h-9 w-9"
-      />
-      <button
-        class="rounded-lg border border-transparent py-2 px-4 text-white font-medium bg-green-500 hover:bg-green-600 transition"
-        onclick="window.open('https://wa.me/553198232657', '_blank')"
+        class="flex flex-wrap lg:flex-nowrap justify-center items-start gap-8 mb-16"
       >
-        Fale com a gente no WhatsApp
-      </button>
-    </div>
+        <img
+          src="./assets/images/rastreador.png"
+          alt="rastreador"
+          class="max-h-[400px] w-auto"
+        />
 
-    <!-- Botão do Instagram -->
-    <div class="flex flex-col items-center gap-2">
-      <img
-        src="./assets/images/instagram.svg"
-        alt="Instagram Icon"
-        class="h-9 w-9"
-      />
-      <button
-        class="rounded-lg border border-transparent py-2 px-4 text-white font-medium bg-pink-500 hover:bg-pink-600 transition"
-        onclick="window.open('https://www.instagram.com/krarastreamento/', '_blank')"
+        <div class="flex flex-col gap-4 w-full lg:w-1/2">
+          <h2
+            class="text-2xl font-bold text-white text-center lg:text-left mb-4"
+          >
+            Características:
+          </h2>
+
+          <Accordion
+            title="Principais Funcionalidades"
+            buttonColor="bg-blue-500 hover:bg-blue-800"
+            id="funcionalidades"
+          >
+            <ul class="list-disc list-inside text-lg md:text-xl">
+              <li><strong>Bloqueio:</strong> Bloqueio imediato do veículo.</li>
+              <li><strong>Monitoramento:</strong> Monitore em tempo real.</li>
+              <li>
+                <strong>Detector de Jammer:</strong> Proteção contra
+                bloqueadores de sinal.
+              </li>
+              <li>
+                <strong>Configuração Remota:</strong> Via PC, GPRS ou SMS.
+              </li>
+              <li>
+                <strong>Atualização de Firmware:</strong> Realizada remotamente.
+              </li>
+            </ul>
+          </Accordion>
+
+          <Accordion
+            title="Especificações Técnicas"
+            buttonColor="bg-blue-500 hover:bg-blue-800"
+            id="especificacoes"
+          >
+            <ul class="list-disc list-inside text-lg md:text-xl">
+              <li>
+                <strong>Memória:</strong> Capacidade de armazenar até 1000
+                posições e 200 cercas virtuais.
+              </li>
+              <li>
+                <strong>GPS e GSM/GPRS:</strong> Antenas internas de alta
+                sensibilidade.
+              </li>
+              <li><strong>Certificações:</strong> CE, FCC, RoHS e Anatel.</li>
+              <li>
+                <strong>Resistência:</strong> Resistência à água (IP67), ideal
+                para enfrentar diferentes condições climáticas.
+              </li>
+            </ul>
+          </Accordion>
+
+          <Accordion
+            title="Alta Precisão GPS"
+            buttonColor="bg-blue-500 hover:bg-blue-800"
+            id="precisao"
+          >
+            <ul class="list-disc list-inside text-lg md:text-xl">
+              <li>
+                <strong>Receptor:</strong> 56 canais com atualização a 10 Hz.
+              </li>
+              <li><strong>Precisão:</strong> 2.5 m CEP (ou 2.0 m com SBAS).</li>
+              <li>
+                <strong>Sensibilidade:</strong> Ideal para diversas condições,
+                com tracking a –162 dBm.
+              </li>
+            </ul>
+          </Accordion>
+        </div>
+      </div>
+
+      <h1
+        class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
-        Siga-nos no Instagram
-      </button>
-    </div>
-  </div>
-</div>
+        <strong>Serviços</strong>
+      </h1>
 
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <img
+          src="./assets/images/v1.png"
+          alt="Carro 3"
+          class="max-h-[400px] w-auto"
+        />
+        <img
+          src="./assets/images/v2.png"
+          alt="Carro 3"
+          class="max-h-[400px] w-auto"
+        />
+        <img
+          src="./assets/images/v3.png"
+          alt="Carro 3"
+          class="max-h-[420px] w-auto"
+        />
+      </div>
+
+      <h1
+        class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
+      >
+        <strong>Contatos</strong>
+      </h1>
+      <h1
+        class="text-white text-6xl md:text-8xl lg:text-2xl font-sans leading-tight mb-12 mt-16 text-center"
+      >
+        <P><strong>Telefone:</strong></P>
+        <strong> (31)99823-2657 </strong>
+      </h1>
+
+      <div class="flex flex-col items-center gap-2">
+        <img
+          src="./assets/images/whatsapp.svg"
+          alt="WhatsApp Icon"
+          class="h-9 w-9"
+        />
+        <button
+          class="rounded-lg border border-transparent py-2 px-4 text-white font-medium bg-green-500 hover:bg-green-600 transition"
+          onclick="window.open('https://wa.me/553198232657', '_blank')"
+        >
+          Fale com a gente no WhatsApp
+        </button>
+      </div>
+
+      <div class="flex flex-col items-center gap-2">
+        <img
+          src="./assets/images/instagram.svg"
+          alt="Instagram Icon"
+          class="h-9 w-9"
+        />
+        <button
+          class="rounded-lg border border-transparent py-2 px-4 text-white font-medium bg-pink-500 hover:bg-pink-600 transition"
+          onclick="window.open('https://www.instagram.com/krarastreamento/', '_blank')"
+        >
+          Siga-nos no Instagram
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-// import StatsCard from "./components/StatsCards.vue";
+import FeatureCard from "./components/FeatureCard.vue";
 import {
   faHeadset,
   faCarOn,
@@ -146,16 +229,27 @@ import {
   faVectorSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import gifBackground from "./assets/images/teste.gif";
+import Header from "./components/Header.vue";
+import Accordion from "./components/Accordion.vue";
 
 const cards = [
   { name: "Suporte 24H", icon: faHeadset },
   { name: "Cerca virtual", icon: faVectorSquare },
   { name: "Aviso de ignição", icon: faCarOn },
-  { name: "Aplicativo no celular", icon: faMobileScreenButton },
   { name: "Relatório de trajetos", icon: faRoute },
   { name: "Rastreamento 24H", icon: faMagnifyingGlassLocation },
   { name: "Bloqueio imediato", icon: faLocationPinLock },
 ];
+
+import { ref, provide } from "vue";
+const openAccordionId = ref(null);
+
+const setOpenAccordionId = (id) => {
+  openAccordionId.value = id;
+};
+
+provide("openAccordionId", openAccordionId);
+provide("setOpenAccordionId", setOpenAccordionId);
 </script>
 
 <style scoped>
