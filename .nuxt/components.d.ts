@@ -3,6 +3,8 @@ import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
       'Accordion': typeof import("../components/Accordion.vue")['default']
+    'ContactForm': typeof import("../components/ContactForm.vue")['default']
+    'ContactFrom2': typeof import("../components/ContactFrom2.vue")['default']
     'FeatureCard': typeof import("../components/FeatureCard.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
@@ -29,6 +31,8 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyAccordion': typeof import("../components/Accordion.vue")['default']
+    'LazyContactForm': typeof import("../components/ContactForm.vue")['default']
+    'LazyContactFrom2': typeof import("../components/ContactFrom2.vue")['default']
     'LazyFeatureCard': typeof import("../components/FeatureCard.vue")['default']
     'LazyHeader': typeof import("../components/Header.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
@@ -61,6 +65,8 @@ declare module 'vue' {
 }
 
 export const Accordion: typeof import("../components/Accordion.vue")['default']
+export const ContactForm: typeof import("../components/ContactForm.vue")['default']
+export const ContactFrom2: typeof import("../components/ContactFrom2.vue")['default']
 export const FeatureCard: typeof import("../components/FeatureCard.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
@@ -87,6 +93,8 @@ export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyAccordion: typeof import("../components/Accordion.vue")['default']
+export const LazyContactForm: typeof import("../components/ContactForm.vue")['default']
+export const LazyContactFrom2: typeof import("../components/ContactFrom2.vue")['default']
 export const LazyFeatureCard: typeof import("../components/FeatureCard.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']

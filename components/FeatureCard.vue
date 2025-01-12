@@ -1,6 +1,6 @@
 <template>
     <div
-      class="flex items-center p-4 border rounded-lg shadow-md bg-white gap-4 hover:shadow-lg transition"
+      class="flex items-center p-4 border rounded-lg shadow-md bg-yellow-300 gap-4 hover:shadow-lg transition"
     >
       <!-- Ícone -->
       <div class="text-blue-500 text-5xl">
@@ -16,7 +16,7 @@
   
   <script setup>
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-  
+  //colocar  a cor em amarelo do cards
   defineProps({
     name: {
       type: String,
