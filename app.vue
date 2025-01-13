@@ -103,7 +103,7 @@
         </strong>
       </p> -->
 
-      <div class="flex flex-wrap justify-center gap-4 mb-16">
+      <!-- <div class="flex flex-wrap justify-center gap-4 mb-16">
         <img
           src="./assets/images/car1.png"
           alt="Carro 1"
@@ -119,12 +119,12 @@
           alt="Carro 3"
           class="max-h-[420px] w-auto"
         />
-      </div>
+      </div> -->
 
       <h2
         class="text-blue-500 text-xl md:text-4xl font-sans leading-relaxed mb-12 text-center"
       >
-        <strong> Contrate a KRA Rastreamento e mantenha-se seguro com tecnologia de ponta </strong>
+        <strong>Vantagens do Rastreamento Veicular</strong>
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,12 +133,14 @@
           :key="index"
           :name="card.name"
           :icon="card.icon"
+          :description="card.description"
+
         />
       </div>
 
       <h1
         id="rastreador"
-        class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
+        class="text-blue-500 text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
         <strong>Rastreador</strong>
       </h1>
@@ -154,7 +156,7 @@
 
         <div class="flex flex-col gap-4 w-full lg:w-1/2">
           <h2
-            class="text-2xl font-bold text-white text-center lg:text-left mb-4"
+            class="text-2xl font-bold text-blue-500 text-center lg:text-left mb-4"
           >
             Características:
           </h2>
@@ -223,7 +225,7 @@
 
       <h1
         id="servicos"
-        class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
+        class="text-blue-500 text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
         <strong>Serviços</strong>
       </h1>
@@ -248,7 +250,7 @@
 
       <h1
         id="contatos"
-        class="text-white text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
+        class="text-blue-500 text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
       >
         <strong>Contatos</strong>
       </h1>
@@ -326,25 +328,39 @@ import {
   faCarOn,
   faMobileScreenButton,
   faRoute,
-  faMagnifyingGlassLocation,
+  faHouse,
   faLocationPinLock,
   faVectorSquare,
+  faSatelliteDish,
+  faTruck,
+  faPercent,
+  faHandshakeAngle,
+  faHandHoldingDollar
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "./components/Header.vue";
 import Accordion from "./components/Accordion.vue";
 import ContactForm from "./components/ContactForm.vue";
 
 const cards = [
-  { name: "Suporte 24H", icon: faHeadset },
-  { name: "Cerca virtual", icon: faVectorSquare },
-  { name: "Aviso de ignição", icon: faCarOn },
-  { name: "Relatório de trajetos", icon: faRoute },
-  { name: "Aplicativo Movel", icon: faMobileScreenButton },
-  { name: "Bloqueio imediato", icon: faLocationPinLock },
+{ name: "Suporte 24H", icon: faHeadset, description: "Em casos de risco, estaremos sempre de prontidão para atender o seu chamado se precisar, com relatórios e bloqueio." },
+{ name: "Cerca virtual", icon: faVectorSquare, description: "Defina áreas seguras para o veículo e receba alertas caso ele saia do perímetro estabelecido." },
+{ name: "Aviso de ignição", icon: faCarOn, description: "Receba notificações sempre que o veículo for ligado ou desligado, aumentando a segurança e controle." },
+{ name: "Assistência veicular", icon: faHandshakeAngle,  description: "Temos planos com direitos a utilização de reboques, troca de pneu, táxi, chaveiro, recarga de bateria e mais." },
+{ name: "Relatório de trajetos", icon: faRoute, description: "Acompanhe o histórico completo dos trajetos realizados pelo veículo de forma detalhada e confiável." },
+{ name: "Aplicativo Movel", icon: faMobileScreenButton, description: "Tenha acesso a todas as funcionalidades do rastreamento diretamente no seu smartphone, com praticidade e mobilidade." },
+{ name: "Bloqueio imediato", icon: faLocationPinLock, description: "Tenha total segurança com a possibilidade de bloquear o veículo instantaneamente em situações de emergência ou risco." },
+{ name: "Instalação em sua residência", icon: faHouse,  description: "Você não precisa se preocupar em ir em lugar nenhum, instalamos rapidamente onde você estiver." },
+{ name: "Comunicação confiável", icon: faSatelliteDish,  description: "Prezamos pela extrema qualidade no rastreador e no chip para garantir a melhor comunicação." },
+{ name: "Também é ideal para monitoramento de frotas", icon: faTruck,  description: "Se torna muito mais simples evitar irregularidades como roubo, desvios, recuperação de carga etc." },
+{ name: "Aumento da chance de recuperação", icon: faPercent,  description: "Com um rastreador em seu veículo, as chances de recuperá-lo aumentam significativamente" },
+{ name: "Custo acessível", icon: faHandHoldingDollar,  description: "O rastreamento veicular possui um preço muito menor que de uma proteção veicular ou seguros." },
+
+
 ];
 
 
 import { ref, provide } from "vue";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 const openAccordionId = ref(null);
 
 const setOpenAccordionId = (id) => {
