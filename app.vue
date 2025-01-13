@@ -223,30 +223,11 @@
         </div>
       </div>
 
-      <h1
-        id="servicos"
-        class="text-blue-500 text-6xl md:text-8xl lg:text-7xl font-sans leading-tight mb-12 mt-16 text-center"
-      >
-        <strong>Serviços</strong>
-      </h1>
-
-      <div class="flex flex-wrap justify-center gap-4 mb-16">
-        <img
-          src="./assets/images/v1.png"
-          alt="Carro 3"
-          class="max-h-[400px] w-auto"
-        />
-        <img
-          src="./assets/images/v2.png"
-          alt="Carro 3"
-          class="max-h-[400px] w-auto"
-        />
-        <img
-          src="./assets/images/v3.png"
-          alt="Carro 3"
-          class="max-h-[420px] w-auto"
-        />
+      <div id="servicos">
+        <ImageGallery />
       </div>
+     
+
 
       <h1
         id="contatos"
@@ -340,6 +321,8 @@ import {
 import Header from "./components/Header.vue";
 import Accordion from "./components/Accordion.vue";
 import ContactForm from "./components/ContactForm.vue";
+import ImageGallery from './components/ImageGallery.vue';
+
 
 const cards = [
 { name: "Suporte 24H", icon: faHeadset, description: "Em casos de risco, estaremos sempre de prontidão para atender o seu chamado se precisar, com relatórios e bloqueio." },
